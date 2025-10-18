@@ -383,6 +383,7 @@ class Works(Endpoint):
         "updated",
     )
 
+	# 2025-10-18 https://api.crossref.org/works?query.xxxxxx=ShowMeTheSupportedFields (with '-' replaced by '_')
     FIELDS_QUERY = (
         "affiliation",
         "author",
@@ -390,6 +391,8 @@ class Works(Endpoint):
         "chair",
         "container_title",
         "contributor",
+        "degree",
+        "description",
         "editor",
         "event_acronym",
         "event_location",
@@ -399,14 +402,18 @@ class Works(Endpoint):
         "funder_name",
         "publisher_location",
         "publisher_name",
+        "standards_body_acronym",
+        "standards_body_name",
+        "title",
         "translator",
     )
 
+	# 2025-10-18 https://api.crossref.org/works?query.title=a&select=ShowMeTheSupportedFields
     FIELDS_SELECT = (
         "DOI",
         "ISBN",
-        "ISSN",
-        "URL",
+        "ISSN",      
+        "URL",          
         "abstract",
         "accepted",
         "alternative-id",
@@ -439,14 +446,15 @@ class Works(Endpoint):
         "page",
         "posted",
         "prefix",
-        "published",
+        "published",        
         "published-online",
         "published-print",
-        "publisher",
+        "publisher",        
         "publisher-location",
         "reference",
         "references-count",
         "relation",
+        "resource",
         "score",
         "short-container-title",
         "short-title",
